@@ -1,3 +1,7 @@
+:root{
+  --primary-color: #000000;
+  --border: 1px solid var(--primary-color);
+}
 body{
   box-sizing:border-box;
   padding: 0;
