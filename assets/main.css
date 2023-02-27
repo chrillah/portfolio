@@ -1,12 +1,15 @@
 :root{
   --primary-color: #000000;
+  --primary-bg: #FFFFFF;
   --border: 1px solid var(--primary-color);
 }
+
 body{
   box-sizing:border-box;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  font-family: sans-serif;
 }
 
 ul{
@@ -16,4 +19,20 @@ ul{
 
 ul li{
   list-style: none;
+}
+
+button{
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+img{
+  margin: 0;
+  padding: 0;
+}
+
+.margins{
+  margin: 0 .3rem;
 }

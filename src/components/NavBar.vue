@@ -1,26 +1,87 @@
 <template>
   <nav class="nav-bar">
-    <button class="logo-container">LOGO</button>
-    <ul class="links-container">
-      <li class="link-item"><RouterLink class="link" to="/">Hem</RouterLink></li>
-      <li class="link-item"><RouterLink class="link" to="/about">Om</RouterLink></li>
-      <li class="link-item"><RouterLink class="link" to="/work">Jobb</RouterLink></li>
+    <div class="button-container">
+      <RouterLink to="/" class="logo-container">
+        <img class="logo" src="/assets/img/logo.svg" alt="" />
+      </RouterLink>
+
+      <div class="mobile-btn-container">
+        <button v-if="isClosed" @click="closeMenu" class="close-menu-btn">
+          --
+        </button>
+        <button v-if="!isClosed" @click="closeMenu" class="close-menu-btn">
+          X
+        </button>
+      </div>
+    </div>
+    <ul v-if="!isClosed" class="links-container">
+      <li class="link-item">
+        <RouterLink @click="closeMenu" class="link" to="/">Hem</RouterLink>
+      </li>
+      <li class="link-item">
+        <RouterLink @click="closeMenu" class="link" to="/about">Om</RouterLink>
+      </li>
+      <li class="link-item">
+        <RouterLink @click="closeMenu" class="link" to="/work">Jobb</RouterLink>
+      </li>
     </ul>
   </nav>
-  <RouterView />
+  <RouterView class="margins" />
 </template>
+<script>
+  export default {
+    data() {
+      return {
+        isClosed: true
+      }
+    },
+    methods: {
+      closeMenu() {
+        this.isClosed = !this.isClosed
+      }
+    }
+  }
+</script>
 <style>
-.links-container{
-  display: grid;
-  grid-template-columns: 1fr;
-}
-.link-item{
-  text-align: center;
-  padding: 3rem;
-  border: var(--border);
-  color: var(--primary-color);
-}
-.link{
-  text-decoration: none;
-}
+  .nav-bar {
+    margin: 0.3rem;
+    position: sticky;
+    z-index: 100;
+    border: var(--border);
+  }
+
+  .logo{
+    padding: 0 .3rem;
+    padding-top: .3rem;
+    box-sizing: border-box;
+    height: 30px;
+    margin: 0;
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .close-menu-btn {
+    cursor: pointer;
+    border-left: var(--border);
+    padding: 0.6rem 0.8rem;
+  }
+
+  .links-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .link-item {
+    border-top: var(--border);
+    text-align: center;
+    padding: 3rem;
+    background-color: var(--primary-bg);
+  }
+  .link {
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--primary-color);
+  }
 </style>

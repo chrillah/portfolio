@@ -10,3 +10,6 @@
 <template>
   <NavBar />
 </template>
+
+<style>
+</style>
