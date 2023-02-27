@@ -44,8 +44,13 @@
 </script>
 <style>
   .nav-bar {
-    margin: 0.3rem;
-    position: sticky;
+    top: .3rem;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    /* margin: 0.3rem; */
+    margin:0 auto;
+    position: fixed;
     z-index: 100;
     border: var(--border);
   }
@@ -71,6 +76,7 @@
   .links-container {
     display: grid;
     grid-template-columns: 1fr;
+    min-height: 100svh;
   }
 
   .link-item {
