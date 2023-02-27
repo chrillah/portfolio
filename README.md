@@ -1,2 +1,1 @@
-# portfolio
-My portfolio
+# A Vue.js template for Vite
