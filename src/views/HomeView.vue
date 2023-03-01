@@ -1,10 +1,17 @@
 <template>
-<div class="margins">
-  <h1>HomeView</h1>
-  <HelloWorld msg="SUCK A DICK" />
-</div>
+    <div
+      style="background-image: url('/assets/img/waste_of_space.png');"
+      class="hero-container"
+    ></div>
 </template>
 <script>
-  import HelloWorld from '../components/HelloWorld.vue'
-  export default { components: { HelloWorld } }
+  export default {}
 </script>
+
+<style>
+.hero-container{
+  height: 100svh;
+  background-position: center;
+  background-size: cover;
+}
+</style>
