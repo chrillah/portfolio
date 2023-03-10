@@ -27,9 +27,14 @@
     </ul>
   </nav>
   <RouterView class="margins" />
+  <FooterSection />
 </template>
 <script>
+import FooterSection from './FooterSection.vue'
   export default {
+    components:{
+      FooterSection
+    },
     data() {
       return {
         isClosed: true,

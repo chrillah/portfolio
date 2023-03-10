@@ -34,6 +34,12 @@ button {
 img {
   margin: 0;
   padding: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+a{
+  text-decoration: none;
 }
 
 /* .margins{
