@@ -1,11 +1,17 @@
 <template>
-    <div
+  <HeroSection />
+    <!-- <div
       style="background-image: url('/assets/img/waste_of_space.png');"
       class="hero-container"
-    ></div>
+    ></div> -->
 </template>
 <script>
-  export default {}
+import HeroSection from '../components/HeroSection.vue'
+  export default {
+    components:{
+      HeroSection
+    }
+  }
 </script>
 
 <style>
