@@ -69,6 +69,7 @@
 }
 
 .footer-container{
+  margin: 0 .5rem;
   padding-top: 2rem;
   display: grid;
 }
