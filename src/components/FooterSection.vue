@@ -70,7 +70,7 @@
 
 .footer-container{
   margin: 0 .5rem;
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
   display: grid;
 }
 
@@ -79,9 +79,14 @@
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
   }
+
+  .footer-links-container{
+    border-right: 1px solid var(--primary-bg);
+  }
 }
 
 .footer-header{
+  padding-top: 2rem;
   font-family: 'Raleway', sans-serif;
   margin: 0;
   color: var(--primary-bg);

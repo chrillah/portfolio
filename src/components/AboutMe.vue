@@ -48,10 +48,11 @@
   .top-grid-container {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    border-bottom: 1px solid var(--primary-color);
   }
   .hi-item {
     padding: .3rem;
-    border: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
   }
   .big-header {
     font-family: 'Raleway', sans-serif;
@@ -64,7 +65,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--primary-color);
+    /* border: 1px solid var(--primary-color); */
   }
   .name-header {
     padding: 0;
@@ -82,10 +83,10 @@
   }
   .presentation-container {
     padding: .3rem;
-    border: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
   }
   .presentation-text {
@@ -97,7 +98,7 @@
   .skills-container {
     padding: .3rem;
     font-family: 'Raleway', sans-serif;
-    border: 1px solid var(--primary-color);
+    /* border: 1px solid var(--primary-color); */
   }
   .skills-header {
     margin: 0.3rem;
