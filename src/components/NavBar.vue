@@ -26,7 +26,7 @@
       </li>
     </ul>
   </nav>
-  <RouterView class="margins" />
+  <RouterView />
   <FooterSection />
 </template>
 <script>

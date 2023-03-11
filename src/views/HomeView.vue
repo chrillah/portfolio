@@ -1,23 +1,26 @@
 <template>
   <HeroSection />
-    <!-- <div
+  <AboutMe />
+  <!-- <div
       style="background-image: url('/assets/img/waste_of_space.png');"
       class="hero-container"
     ></div> -->
 </template>
 <script>
-import HeroSection from '../components/HeroSection.vue'
+  import HeroSection from '../components/HeroSection.vue'
+  import AboutMe from '../components/AboutMe.vue'
   export default {
-    components:{
-      HeroSection
+    components: {
+      HeroSection,
+      AboutMe
     }
   }
 </script>
 
 <style>
-.hero-container{
-  height: 100svh;
-  background-position: center;
-  background-size: cover;
-}
+  .hero-container {
+    height: 100svh;
+    background-position: center;
+    background-size: cover;
+  }
 </style>
