@@ -2,7 +2,7 @@
   <div class="footer-wrapper">
     <div class="footer-container">
       <div class="footer-links-container">
-        <h1 class="footer-header">Relevant links</h1>
+        <h3 class="footer-header">Relevant links</h3>
         <div class="link-logos-container">
           <a target="_blank" href="http://studentiths.se/JSUFEU-STHLM/ChristopherRntjs/index.html" class="logo-link-item">
             <img
@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="contact-container">
-        <h1 class="footer-header">Contact</h1>
+        <h3 class="footer-header">Contact</h3>
         <div class="contact-items-container">
           <div class="contact-item">
             <a href="tel:+46 736 70 32 19" class="contact-logo-container">

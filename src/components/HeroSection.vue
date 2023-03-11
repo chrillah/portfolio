@@ -65,7 +65,7 @@
     min-height: 100px;
     position: relative;
     /* border: 10px solid var(--primary-color); */
-    animation: changing-border-width 5s infinite;
+    animation: changing-border-width 8s infinite;
   }
 
   @keyframes changing-border-width{
@@ -81,7 +81,7 @@
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     animation: makes-a-circle 5s infinite;
@@ -104,7 +104,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: makes-a-circle 5s infinite;
+    animation: makes-a-circle 4s infinite;
   }
 
   @keyframes makes-a-circle{
@@ -130,7 +130,7 @@
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     animation: makes-a-circle 5s infinite;
@@ -141,7 +141,7 @@
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 70%;
+    top: 60%;
     right: 0;
   }
 
@@ -151,7 +151,7 @@
     height: 20px;
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 40%;
   }
 
   .t-box-1 {
