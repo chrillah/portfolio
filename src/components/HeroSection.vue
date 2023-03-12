@@ -59,10 +59,11 @@
     font-weight: 900;
     font-size: 40vw;
     text-align: center;
+    color: var(--primary-bg);
   }
   .hero-grid-container {
     margin: 0 auto;
-    max-width: 700px;
+    max-width: 900px;
     border: 12px solid var(--primary-color);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -73,8 +74,8 @@
   @media (min-width:768px) {
     .hero-grid-container{
       padding: 8rem 0;
-      grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: none;
+      /* grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: none; */
     }
   }
 
