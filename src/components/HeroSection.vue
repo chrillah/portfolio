@@ -1,6 +1,6 @@
 <template>
   <div class="hero-wrapper">
-    <h1 class="hero-header">web</h1>
+    <!-- <h1 class="hero-header">web</h1> -->
     <div class="hero-grid-container">
       <div class="grid-letter">
         <div class="p-box-1" />
@@ -36,12 +36,19 @@
         <div class="o-box" />
       </div>
     </div>
+    <h1 class="intro-header">portfolio</h1>
   </div>
 </template>
 
 <script></script>
 <style>
   .hero-wrapper {
+    position: relative;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     /* margin-top: 1rem; */
   }
 
@@ -54,13 +61,46 @@
     text-align: center;
   }
   .hero-grid-container {
-    border: 10px solid var(--primary-color);
+    width: 100%;
+    max-width: 700px;
+    border: 12px solid var(--primary-color);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
 
+
+  @media (min-width:768px) {
+    .hero-grid-container{
+      padding: 8rem 0;
+    }
+  }
+
+  .intro-header{
+    font-size: 4rem;
+    position: absolute;
+    top: 10rem;
+    left: 3rem;
+    color: var(--secondary-color);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+  }
+
+  @media (min-width:375px) {
+    .intro-header{
+      font-size: 5rem;
+    }
+  }
+
+  @media (min-width:768px) {
+    .intro-header{
+      top: 20rem;
+      left: 10rem;
+    }
+  }
+
   .grid-letter {
+    background-color: var(--primary-bg);
     box-sizing: border-box;
     min-height: 100px;
     position: relative;
@@ -69,11 +109,11 @@
   }
 
   @keyframes changing-border-width{
-    0%{    border: 0px solid transparent;}
+    0%{    border: 0px solid var(--primary-bg);}
     25%{    border: 1px solid var(--primary-color);}
-    50%{    border: 10px solid var(--primary-color);}
+    50%{    border: 12px solid var(--primary-color);}
     75%{    border: 1px solid var(--primary-color);}
-    100%{    border: 0px solid transparent;}
+    100%{    border: 0px solid var(--primary-bg);}
   }
 
   .p-box-1 {

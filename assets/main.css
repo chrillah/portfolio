@@ -3,6 +3,8 @@
 :root {
   --primary-color: #000000;
   --primary-bg: #ffffff;
+
+  --secondary-color: #C0F205;
   --border: 1px solid var(--primary-color);
 }
 

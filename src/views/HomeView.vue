@@ -1,6 +1,7 @@
 <template>
   <HeroSection />
   <AboutMe />
+  <WorkExperience />
   <!-- <div
       style="background-image: url('/assets/img/waste_of_space.png');"
       class="hero-container"
@@ -9,10 +10,12 @@
 <script>
   import HeroSection from '../components/HeroSection.vue'
   import AboutMe from '../components/AboutMe.vue'
+  import WorkExperience from '../components/WorkExperience.vue';
   export default {
     components: {
       HeroSection,
-      AboutMe
+      AboutMe,
+      WorkExperience
     }
   }
 </script>

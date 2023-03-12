@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav-bar">
+  <nav :class="menu">
     <div class="button-container">
       <RouterLink @click="closeMenu" to="/" class="logo-container">
         <img class="logo" src="/assets/img/logo.svg" alt="" />
@@ -14,7 +14,7 @@
         </button>
       </div>
     </div>
-    <ul :style="{display: displays}" class="links-container">
+    <ul :style="{ display: displays }" class="links-container">
       <li class="link-item">
         <RouterLink @click="closeMenu" class="link" to="/">Hem</RouterLink>
       </li>
@@ -30,59 +30,69 @@
   <FooterSection />
 </template>
 <script>
-import FooterSection from './FooterSection.vue'
+  import FooterSection from './FooterSection.vue'
   export default {
-    components:{
+    components: {
       FooterSection
     },
     data() {
       return {
+        menu: "nav-bar invert-color",
         isClosed: true,
-        displays : 'none'
+        displays: 'none'
       }
     },
     methods: {
-      openMenu(){
+      openMenu() {
         this.displays = 'grid'
         this.isClosed = false
+        this.menu = "nav-bar"
       },
       closeMenu() {
         this.displays = 'none'
         this.isClosed = true
+        this.menu = "nav-bar invert-color"
       }
     }
   }
 </script>
 <style>
   .nav-bar {
-    /* max-width: 769px; */
-    top: .3rem;
+    background-color: var(--primary-bg);
+    /* top: 0.3rem; */
     left: 50%;
     transform: translate(-50%);
     width: 100%;
-    margin:0 auto;
+    margin: 0 auto;
     position: fixed;
     z-index: 100;
-    border: var(--border);
+  }
+
+  .invert-color{
     filter: invert(1);
     mix-blend-mode: difference;
   }
 
-  .logo{
-    padding: 0 .3rem;
-    padding-top: .3rem;
+  .logo {
+    display: none;
+    padding: 0 0.3rem;
+    padding-top: 0.3rem;
     box-sizing: border-box;
     height: 30px;
     margin: 0;
   }
   .button-container {
+    /* color: #000000;
+    filter: invert(1);
+    mix-blend-mode: difference; */
     display: flex;
     justify-content: space-between;
   }
 
   .close-menu-btn {
     cursor: pointer;
-    border-left: var(--border);
+    /* border-left: var(--border); */
+    border: 1px solid;
     padding: 0.6rem 0.8rem;
   }
 
@@ -95,19 +105,19 @@ import FooterSection from './FooterSection.vue'
     position: relative;
     top: 0px;
     animation-name: open;
-    animation-duration: .1s;
+    animation-duration: 0.1s;
     border-top: var(--border);
     text-align: center;
     background-color: var(--primary-bg);
   }
 
-  @keyframes open{
-    from{
+  @keyframes open {
+    from {
       background-color: var(--primary-bg);
       top: -300px;
     }
 
-    to{
+    to {
       background-color: #ffffff;
       top: 0;
     }
@@ -117,18 +127,18 @@ import FooterSection from './FooterSection.vue'
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-weight: 900;
     text-decoration: none;
     color: var(--primary-color);
   }
 
-  @media(min-width: 769px){
+  @media (min-width: 769px) {
     /* .mobile-btn-container{
       display: none;
     } */
-    .links-container{
+    .links-container {
       display: grid;
     }
-}
+  }
 </style>
