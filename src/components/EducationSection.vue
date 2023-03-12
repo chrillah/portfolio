@@ -1,13 +1,51 @@
 <template>
-  <div>
+  <div class="education-wrapper">
+    <div class="education-container">
+      <button @click="toEducation(education.id)" v-for="education in listOfEducation" :key="education.id" :style="{backgroundImage: `url(${education.image})`}" class="education-item">
+        <h1 class="education-title-header">{{ education.title }}</h1>
+        <h5 class="school-header">{{ education.school }}</h5>
+      </button>
+    </div>
   </div>
 </template>
+<style>
+.education-wrapper{
+  min-height: 50rem;
+  background-color: var(--third-bg);
+}
+.education-container{
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+.education-item{
+  max-height: 400px;
+  max-width: 400px;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
+  position: relative;
+}
+
+.education-title-header{
+
+}
+
+.school-header{
+
+}
+</style>
 <script>
   export default {
+    methods:{
+      toEducation(education){
+        console.log(education)
+      }
+    },
     data() {
       return {
-        presentation: [
+        listOfEducation: [
           {
             id: 1,
             title: 'Frontend Developer',

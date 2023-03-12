@@ -6,6 +6,8 @@
 
   --secondary-color: #C0F205;
   --border: 1px solid var(--primary-color);
+
+  --third-bg: #F21A05;
 }
 
 body {
