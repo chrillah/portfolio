@@ -73,7 +73,7 @@
 
   @media (min-width:768px) {
     .hero-grid-container{
-      padding: 8rem 0;
+      padding: 1rem 0;
       /* grid-template-columns: repeat(9, 1fr);
     grid-template-rows: none; */
     }
@@ -106,7 +106,7 @@
   .grid-letter {
     background-color: var(--primary-bg);
     box-sizing: border-box;
-    min-height: 100px;
+    min-height: 190px;
     position: relative;
     /* border: 10px solid var(--primary-color); */
     animation: changing-border-width 8s infinite;
@@ -122,8 +122,8 @@
 
   .p-box-1 {
     background-color: var(--primary-color);
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     top: 30%;
     left: 50%;
@@ -133,8 +133,8 @@
 
   .p-box-2 {
     background-color: var(--primary-color);
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -142,8 +142,8 @@
 
   .o-box {
     background-color: var(--primary-color);
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 50px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -171,8 +171,8 @@
 
   .r-box-1 {
     background-color: var(--primary-color);
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     top: 30%;
     left: 50%;
@@ -191,17 +191,17 @@
 
   .r-box-3 {
     background-color: var(--primary-color);
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     bottom: 0;
-    left: 40%;
+    right: 30%;
   }
 
   .t-box-1 {
     background-color: var(--primary-color);
     width: 20px;
-    height: 20px;
+    height: 80px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -210,7 +210,7 @@
   .t-box-2 {
     background-color: var(--primary-color);
     width: 20px;
-    height: 20px;
+    height: 80px;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -218,8 +218,8 @@
 
   .f-box-1 {
     background-color: var(--primary-color);
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     top: 20%;
     right: 0;
@@ -227,8 +227,8 @@
 
   .f-box-2 {
     background-color: var(--primary-color);
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -236,8 +236,8 @@
 
   .l-box {
     background-color: var(--primary-color);
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     position: absolute;
     top: 0;
     right: 0;
@@ -248,7 +248,7 @@
     width: 20px;
     height: 100px;
     position: absolute;
-    top: 0;
+    top: 20%;
     left: 0;
   }
 
@@ -257,7 +257,7 @@
     width: 20px;
     height: 100px;
     position: absolute;
-    top: 0;
+    top: 20%;
     right: 0;
   }
 </style>
