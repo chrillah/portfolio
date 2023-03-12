@@ -36,19 +36,19 @@
         <div class="o-box" />
       </div>
     </div>
-    <h1 class="intro-header">portfolio</h1>
+    <!-- <h1 class="intro-header">portfolio</h1> -->
   </div>
 </template>
 
 <script></script>
 <style>
   .hero-wrapper {
-    position: relative;
+    /* position: relative; */
     background-color: var(--primary-color);
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; */
     /* margin-top: 1rem; */
   }
 
@@ -61,7 +61,7 @@
     text-align: center;
   }
   .hero-grid-container {
-    width: 100%;
+    margin: 0 auto;
     max-width: 700px;
     border: 12px solid var(--primary-color);
     display: grid;
@@ -73,10 +73,13 @@
   @media (min-width:768px) {
     .hero-grid-container{
       padding: 8rem 0;
+      grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: none;
     }
   }
 
   .intro-header{
+    display: none;
     font-size: 4rem;
     position: absolute;
     top: 10rem;
