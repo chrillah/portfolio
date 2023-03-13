@@ -45,7 +45,7 @@
     </div>
   </div>
 </template>
-<style>
+<style scoped>
 .detail-wrapper{
   /* padding-top: 3rem; */
 }
@@ -301,9 +301,7 @@ export default{
     },
     extraInformation :{
       type : Object,
-      default(){
-        return {message : "Education completed"}
-      }
+      required : true
     },
     tools : {
       type : Object,

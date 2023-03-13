@@ -4,6 +4,7 @@ import HomeView from './views/HomeView.vue'
 import AboutView from './views/AboutView.vue'
 import WorkView from './views/WorkView.vue'
 import FrontendView from './views/FrontendView.vue'
+import UxView from './views/UxView.vue'
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -27,6 +28,11 @@ export default createRouter({
       component: FrontendView,
       name: 'frontend',
       path: '/frontend'
+    },
+    {
+      component: UxView,
+      name: 'ux',
+      path: '/ux'
     }
   ]
 })

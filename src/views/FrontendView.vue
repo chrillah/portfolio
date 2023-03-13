@@ -1,5 +1,5 @@
 <template>
-  <EducationDetail
+  <FrontendDetail
     :title="title"
     :year="year"
     :there-is-extra="thereIsExtra"
@@ -10,10 +10,10 @@
   />
 </template>
 <script>
-  import EducationDetail from '../components/EducationDetail.vue'
+  import FrontendDetail from '../components/FrontendDetail.vue'
   export default {
     components: {
-      EducationDetail
+      FrontendDetail
     },
     data() {
       return {

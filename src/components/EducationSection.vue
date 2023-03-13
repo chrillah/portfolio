@@ -147,7 +147,7 @@
           {
             id: 2,
             title: 'UX',
-            view : '/frontend',
+            view : '/ux',
             school: 'Berghs School of Communication',
             tools : ["Wireframes & Fast iterations","Interaction design","Clickable prototypes","User testing","Responsive design"],
             image:
