@@ -9,10 +9,10 @@
       </div>
     </div>
     <div class="education-container">
-      <button @click="toEducation(education.id)" v-for="education in listOfEducation" :key="education.id" :style="{backgroundImage: `url(${education.image})`}" class="education-item action-btn">
+      <RouterLink :to="education.view" @click="toEducation(education.id)" v-for="education in listOfEducation" :key="education.id" :style="{backgroundImage: `url(${education.image})`}" class="education-item action-btn">
         <h1 class="education-title-header">{{ education.title }}</h1>
         <h5 class="school-header">{{ education.school }}</h5>
-      </button>
+      </RouterLink>
     </div>
   </div>
 </template>
@@ -81,7 +81,6 @@
   padding: .1rem;
   min-height: 300px;
   /* max-width: 400px; */
-  cursor: pointer;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -125,10 +124,12 @@
 }
 </style>
 <script>
+
   export default {
     methods:{
       toEducation(education){
         console.log(education)
+
       }
     },
     data() {
@@ -137,6 +138,7 @@
           {
             id: 1,
             title: 'Frontend Developer',
+            view : '/frontend',
             school: 'IT-Högskolan',
             tools : ["HTML & CSS", "Vanilla JavaScript","UX & UI-design","JavaScript with frameworks","Agile development","Full-stack development"],
             image:
@@ -145,6 +147,7 @@
           {
             id: 2,
             title: 'UX',
+            view : '/frontend',
             school: 'Berghs School of Communication',
             tools : ["Wireframes & Fast iterations","Interaction design","Clickable prototypes","User testing","Responsive design"],
             image:
@@ -153,6 +156,7 @@
           {
             id: 3,
             title: 'Graphic design',
+            view : '/frontend',
             school: 'Nackademin',
             tools : ["Graphic design & typography","Packaging design & construction","CAD technique","Marketing & consumer behavior"],
             image:

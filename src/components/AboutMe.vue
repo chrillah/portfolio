@@ -48,6 +48,7 @@
 </template>
 <style>
   .about-wrapper {
+    border-bottom: 1px solid var(--primary-color);
   }
   .about-container {
   }

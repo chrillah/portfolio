@@ -29,6 +29,7 @@ ul li {
 }
 
 button {
+  cursor: pointer;
   background: transparent;
   border: none;
   padding: 0;
@@ -52,8 +53,13 @@ a{
 
 
 .action-btn{
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-weight: 900;
+  color: var(--primary-color);
   border: 5px solid var(--secondary-color);
   border-radius: 10px;
+  background-color: var(--secondary-color);
 }
 
 .action-btn:hover{

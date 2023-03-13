@@ -46,7 +46,7 @@
       openMenu() {
         this.displays = 'grid'
         this.isClosed = false
-        this.menu = "nav-bar"
+        this.menu = "nav-bar nav-back-ground"
       },
       closeMenu() {
         this.displays = 'none'
@@ -58,14 +58,18 @@
 </script>
 <style>
   .nav-bar {
-    background-color: var(--primary-bg);
+
     /* top: 0.3rem; */
-    left: 50%;
-    transform: translate(-50%);
+    /* left: 50%;
+    transform: translate(-50%); */
     width: 100%;
     margin: 0 auto;
     position: fixed;
     z-index: 100;
+  }
+
+  .nav-back-ground{
+    background-color: var(--primary-bg);
   }
 
   .invert-color{
