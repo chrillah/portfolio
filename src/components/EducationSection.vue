@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="education-container">
-      <RouterLink :to="education.view" @click="toEducation(education.id)" v-for="education in listOfEducation" :key="education.id" :style="{backgroundImage: `url(${education.image})`}" class="education-item action-btn">
+      <RouterLink :to="education.view" v-for="education in listOfEducation" :key="education.id" :style="{backgroundImage: `url(${education.image})`}" class="education-item action-btn">
         <h1 class="education-title-header">{{ education.title }}</h1>
         <h5 class="school-header">{{ education.school }}</h5>
       </RouterLink>
@@ -92,6 +92,7 @@
   display: flex;
   justify-content: space-between;
   align-items: end;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 @media (min-width: 425px){
@@ -126,12 +127,6 @@
 <script>
 
   export default {
-    methods:{
-      toEducation(education){
-        console.log(education)
-
-      }
-    },
     data() {
       return {
         listOfEducation: [
