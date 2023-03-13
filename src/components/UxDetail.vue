@@ -31,7 +31,7 @@
         <div class="project-img-container"><img class="project-img" :src="project.image" alt="Project image"></div>
       </div>
       <div class="extra-image-container">
-        <img :src="detailExtraImage" alt="">
+        <img :src="detailExtraImage" alt="UX for Spoilerappen">
       </div>
     </div>
     <div class="education-button-container">
@@ -258,6 +258,10 @@
   margin: 0;
   padding: 0;
   width: 100%;
+}
+
+.extra-image-container{
+  background-color: var(--primary-color);
 }
 
 .education-button-container{

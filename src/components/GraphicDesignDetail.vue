@@ -64,14 +64,14 @@
   font-family: 'Raleway', sans-serif;
   margin: 0;
   padding-top: 3rem;
-  font-size: 6rem;
+  font-size: 4rem;
 }
 
-/* @media (min-width:768px){
+@media (min-width:425px){
   .header-section{
-  font-size: 5rem;
+  font-size: 6rem;
 }
-} */
+}
 
 .information-section-container{
   border: 1px solid var(--primary-color);

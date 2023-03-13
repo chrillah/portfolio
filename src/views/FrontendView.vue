@@ -53,7 +53,7 @@
             description:
               'The purpose of this project is to create a website that retrieves data from an API. For this project, I chose Rick and Morty´s API and created a website where you can collect playing cards from the famous TV series.',
             image:
-              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/kl34/publication-web-resources/image/rickandmortyapi-25.png',
+              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/rickandmortyapi-25.png',
             link:
               'http://studentiths.se/JSUFEU-STHLM/ChristopherRntjs/index.html'
           }
