@@ -50,7 +50,7 @@
   padding-top: 3rem;
 }
 .back{
-  margin: 1rem;
+  margin: .3rem;
   padding: 1rem;
   display: block;
   background-image: url('/assets/img/portfolio_black-arrow.png');
@@ -80,10 +80,17 @@
   font-size: 5rem;
 }
 }
+
 .information-section-container{
   border: 1px solid var(--primary-color);
   display: grid;
   grid-template-columns: 2fr 1fr;
+}
+
+@media (min-width:1024px){
+  .information-section-container{
+  grid-template-columns: 2fr 2fr;
+}
 }
 
 .description-container{
@@ -94,6 +101,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.description-container p{
+  max-width: 600px;
 }
 
 .side-information-container{
@@ -109,6 +120,13 @@
 .year-container{
   border-bottom: 1px solid var(--primary-color);
 }
+
+@media (min-width:1024px){
+.year-container h3{
+  font-size: 2.5rem;
+}
+}
+
 
 @media (min-width:768px){
   .side-information-container{
@@ -181,6 +199,7 @@
 .projects-item-container{
   display: grid;
   grid-template-rows: 1fr auto;
+  background-color: var(--primary-color);
 }
 
 @media (min-width:768px){
@@ -192,7 +211,7 @@
 
 .symbol-img{
   padding-top: 2rem;
-  max-width: 100px;
+  max-width: 150px;
 }
 .symbol-img img{
   height: auto;
@@ -213,6 +232,7 @@
 @media (min-width:768px){
   .project-detail{
     padding: 1rem;
+    border-bottom: 1px solid var(--primary-bg);
   }
   .symbol-img{
     rotate: -90deg;
