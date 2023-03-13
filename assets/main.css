@@ -49,3 +49,13 @@ a{
 /* .margins{
   margin: 0 .3rem;
 } */
+
+
+.action-btn{
+  border: 5px solid var(--secondary-color);
+  border-radius: 10px;
+}
+
+.action-btn:hover{
+
+}

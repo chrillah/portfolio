@@ -1,7 +1,15 @@
 <template>
   <div class="education-wrapper">
+    <div class="education-intro-section">
+      <h1 class="section-header">Education</h1>
+      <div class="intro-presentation">
+        <p>Frontend development</p>
+        <p>UX</p>
+        <p>Graphic design</p>
+      </div>
+    </div>
     <div class="education-container">
-      <button @click="toEducation(education.id)" v-for="education in listOfEducation" :key="education.id" :style="{backgroundImage: `url(${education.image})`}" class="education-item">
+      <button @click="toEducation(education.id)" v-for="education in listOfEducation" :key="education.id" :style="{backgroundImage: `url(${education.image})`}" class="education-item action-btn">
         <h1 class="education-title-header">{{ education.title }}</h1>
         <h5 class="school-header">{{ education.school }}</h5>
       </button>
@@ -10,30 +18,110 @@
 </template>
 <style>
 .education-wrapper{
-  min-height: 50rem;
+  padding: 5rem 0;
+  /* width: 100%; */
+  /* min-height: 50rem; */
   background-color: var(--third-bg);
 }
+
+.education-intro-section{
+  margin: 0.6rem;
+  padding: 0.3rem;
+}
+
+.section-header{
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 3.5rem;
+  color: var(--primary-bg)
+}
+
+.intro-presentation{
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+}
+
+.intro-presentation p{
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  color: var(--primary-bg);
+  font-size: .8rem;
+}
+
+@media(min-width: 375px){
+  .intro-presentation p{
+    font-size: 1rem;
+  }
+}
+
 .education-container{
+  margin: 5rem auto;
+  max-width: 470px;
+  padding: 0.6rem;
   display: grid;
+  gap: 5rem;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
 }
+
+@media (min-width: 1440px) {
+  .education-container{
+    padding: 0;
+    gap: 0;
+    max-width: 1480px;
+    margin: 0rem auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+
 .education-item{
-  max-height: 400px;
-  max-width: 400px;
+  margin: 0.3rem;
+  padding: .1rem;
+  min-height: 300px;
+  /* max-width: 400px; */
   cursor: pointer;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   position: relative;
+
+
+
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+@media (min-width: 425px){
+  .education-item{
+    padding: .5rem;
+    min-height: 400px;
+    margin: 2rem;
+  }
+}
+
+@media (min-width: 1440px){
+  .education-item{
+    min-height: 450px;
+  }
 }
 
 .education-title-header{
-
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  text-align: left;
+  font-size: 1.9rem;
 }
 
 .school-header{
-
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  text-align: right;
+  font-size: .8rem;
+  font-style: italic;
 }
 </style>
 <script>
@@ -50,6 +138,7 @@
             id: 1,
             title: 'Frontend Developer',
             school: 'IT-Högskolan',
+            tools : ["HTML & CSS", "Vanilla JavaScript","UX & UI-design","JavaScript with frameworks","Agile development","Full-stack development"],
             image:
               'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/kl34/publication-web-resources/image/frontend-34.png'
           },
@@ -57,6 +146,7 @@
             id: 2,
             title: 'UX',
             school: 'Berghs School of Communication',
+            tools : ["Wireframes & Fast iterations","Interaction design","Clickable prototypes","User testing","Responsive design"],
             image:
               'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/kl34/publication-web-resources/image/ux_presentation-01.png'
           },
@@ -64,6 +154,7 @@
             id: 3,
             title: 'Graphic design',
             school: 'Nackademin',
+            tools : ["Graphic design & typography","Packaging design & construction","CAD technique","Marketing & consumer behavior"],
             image:
               'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/kl34/publication-web-resources/image/graphic-presentation-01.png'
           }
