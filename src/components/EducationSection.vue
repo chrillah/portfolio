@@ -60,7 +60,7 @@
   max-width: 470px;
   padding: 0.6rem;
   display: grid;
-  gap: 5rem;
+  gap: 3rem;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
 }
@@ -156,7 +156,7 @@
           {
             id: 3,
             title: 'Graphic design',
-            view : '/frontend',
+            view : '/graphic-design',
             school: 'Nackademin',
             tools : ["Graphic design & typography","Packaging design & construction","CAD technique","Marketing & consumer behavior"],
             image:
