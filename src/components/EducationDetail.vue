@@ -47,7 +47,7 @@
 </template>
 <style>
 .detail-wrapper{
-  padding-top: 3rem;
+  /* padding-top: 3rem; */
 }
 .back{
   margin: .3rem;

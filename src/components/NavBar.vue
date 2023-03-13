@@ -1,10 +1,6 @@
 <template>
   <nav :class="menu">
     <div class="button-container">
-      <RouterLink @click="closeMenu" to="/" class="logo-container">
-        <img class="logo" src="/assets/img/logo.svg" alt="" />
-      </RouterLink>
-
       <div class="mobile-btn-container">
         <button v-if="isClosed" @click="openMenu" class="close-menu-btn">
           --
@@ -62,13 +58,14 @@
     /* top: 0.3rem; */
     /* left: 50%;
     transform: translate(-50%); */
-    width: 100%;
     margin: 0 auto;
     position: fixed;
     z-index: 100;
+    right: 0;
   }
 
   .nav-back-ground{
+    width: 100%;
     background-color: var(--primary-bg);
   }
 
@@ -85,15 +82,18 @@
     height: 30px;
     margin: 0;
   }
+
   .button-container {
     /* color: #000000;
     filter: invert(1);
     mix-blend-mode: difference; */
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
   }
 
   .close-menu-btn {
+    /* display: flex;
+    justify-content: space-between; */
     cursor: pointer;
     /* border-left: var(--border); */
     border: 1px solid;
