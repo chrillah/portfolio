@@ -137,7 +137,7 @@
             school: 'IT-Högskolan',
             tools : ["HTML & CSS", "Vanilla JavaScript","UX & UI-design","JavaScript with frameworks","Agile development","Full-stack development"],
             image:
-              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/kl34/publication-web-resources/image/frontend-34.png'
+              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/frontend-34.png'
           },
           {
             id: 2,
@@ -146,7 +146,7 @@
             school: 'Berghs School of Communication',
             tools : ["Wireframes & Fast iterations","Interaction design","Clickable prototypes","User testing","Responsive design"],
             image:
-              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/kl34/publication-web-resources/image/ux_presentation-01.png'
+              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/ux_presentation-01.png'
           },
           {
             id: 3,
@@ -155,7 +155,7 @@
             school: 'Nackademin',
             tools : ["Graphic design & typography","Packaging design & construction","CAD technique","Marketing & consumer behavior"],
             image:
-              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/kl34/publication-web-resources/image/graphic-presentation-01.png'
+              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/graphic-presentation-01.png'
           }
         ],
         educations: [

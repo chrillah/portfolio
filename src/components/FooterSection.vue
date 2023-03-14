@@ -138,6 +138,13 @@
   top: 30%;
   color: var(--primary-bg);
   font-size: .7rem;
+  word-break: break-all;
 }
+
+@media (min-width: 375px) {
+  .info-item a{
+      word-break: normal;
+    }
+  }
 
 </style>

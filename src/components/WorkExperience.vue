@@ -39,8 +39,14 @@
     line-height: 4rem;
     padding: 0 0.3rem 5rem 0.3rem;
     margin: 0 0.6rem;
+    word-break: break-all;
   }
 
+  @media (min-width: 375px) {
+    .work-header{
+      word-break: normal;
+    }
+  }
   .experience-container {
     padding: 8rem;
     gap: 4rem;

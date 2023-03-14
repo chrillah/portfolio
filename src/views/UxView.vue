@@ -35,11 +35,11 @@
             description:
               'This is the final project for the UX Design course. Here, I created UX for a fictional app called Spoilerappen, where the idea is to read trivia about movies and TV series, learn about easter eggs, or spoil them. A gathering place for pop culture movie and TV series enthusiasts.',
             image:
-              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/kl34/publication-web-resources/image/spolierappen-01.png'
+              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/spolierappen-01.png'
           }
         ],
         extraImage:
-          'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/cypw/publication-web-resources/image/web-portfolio.png'
+          'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/web-portfolio.png'
       }
     },
     components: {
