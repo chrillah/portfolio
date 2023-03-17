@@ -1,8 +1,44 @@
+<script>
+  export default {
+    data() {
+      return {
+        color: 'var(--primary-bg)',
+        letters: [
+          {
+            id: 1,
+            boxes: [
+              { id: 1,
+                class: 'p-box-1'
+              },
+              {
+                id: 2,
+                class: 'p-box-2'
+              }
+            ]
+          }
+        ]
+      }
+    },
+    methods: {
+      changeColor() {
+        if (this.color === 'var(--secondary-color)') {
+          this.color = 'var(--primary-bg)'
+        } else {
+          this.color = 'var(--secondary-color)'
+        }
+      }
+    }
+  }
+</script>
 <template>
   <div class="hero-wrapper">
     <!-- <h1 class="hero-header">web</h1> -->
     <div class="hero-grid-container">
-      <div class="grid-letter">
+      <div
+        @click="changeColor"
+        :style="{ backgroundColor: color }"
+        class="grid-letter"
+      >
         <div class="p-box-1" />
         <div class="p-box-2" />
       </div>
@@ -52,7 +88,7 @@
     /* margin-top: 1rem; */
   }
 
-  .hero-header{
+  .hero-header {
     padding: 0;
     margin: 0;
     font-family: 'Raleway', sans-serif;
@@ -70,16 +106,15 @@
     grid-template-rows: repeat(3, 1fr);
   }
 
-
-  @media (min-width:768px) {
-    .hero-grid-container{
+  @media (min-width: 768px) {
+    .hero-grid-container {
       padding: 1rem 0;
       /* grid-template-columns: repeat(9, 1fr);
     grid-template-rows: none; */
     }
   }
 
-  .intro-header{
+  .intro-header {
     display: none;
     font-size: 4rem;
     position: absolute;
@@ -90,14 +125,14 @@
     font-style: italic;
   }
 
-  @media (min-width:375px) {
-    .intro-header{
+  @media (min-width: 375px) {
+    .intro-header {
       font-size: 5rem;
     }
   }
 
-  @media (min-width:768px) {
-    .intro-header{
+  @media (min-width: 768px) {
+    .intro-header {
       top: 20rem;
       left: 10rem;
     }
@@ -112,12 +147,22 @@
     animation: changing-border-width 8s infinite;
   }
 
-  @keyframes changing-border-width{
-    0%{    border: 0px solid var(--primary-bg);}
-    25%{    border: 1px solid var(--primary-color);}
-    50%{    border: 12px solid var(--primary-color);}
-    75%{    border: 1px solid var(--primary-color);}
-    100%{    border: 0px solid var(--primary-bg);}
+  @keyframes changing-border-width {
+    0% {
+      border: 0px solid var(--primary-bg);
+    }
+    25% {
+      border: 1px solid var(--primary-color);
+    }
+    50% {
+      border: 12px solid var(--primary-color);
+    }
+    75% {
+      border: 1px solid var(--primary-color);
+    }
+    100% {
+      border: 0px solid var(--primary-bg);
+    }
   }
 
   .p-box-1 {
@@ -151,20 +196,20 @@
     animation: makes-a-circle 4s infinite;
   }
 
-  @keyframes makes-a-circle{
-    0%{
+  @keyframes makes-a-circle {
+    0% {
       border-radius: 0;
     }
-    25%{
+    25% {
       border-radius: 0px;
     }
-    50%{
+    50% {
       border-radius: 100px;
     }
-    75%{
+    75% {
       border-radius: 0px;
     }
-    100%{
+    100% {
       border-radius: 0;
     }
   }
