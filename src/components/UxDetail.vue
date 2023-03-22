@@ -34,9 +34,9 @@
         <img :src="detailExtraImage" alt="UX for Spoilerappen">
       </div>
     </div>
-    <div class="education-button-container">
+    <!-- <div class="education-button-container">
       <RouterLink to="#top" class="action-btn to-the-top">To the top</RouterLink>
-    </div>
+    </div> -->
   </div>
 </template>
 <style scoped>
@@ -237,7 +237,7 @@
 @media (min-width:872px){
   .project-detail{
     padding: 1rem;
-    border-bottom: 1px solid var(--primary-bg);
+    /* border-bottom: 1px solid var(--primary-bg); */
   }
   .symbol-img{
     rotate: -90deg;
