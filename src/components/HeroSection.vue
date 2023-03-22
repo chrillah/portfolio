@@ -34,11 +34,7 @@
   <div class="hero-wrapper">
     <!-- <h1 class="hero-header">web</h1> -->
     <div class="hero-grid-container">
-      <div
-        @click="changeColor"
-        :style="{ backgroundColor: color }"
-        class="grid-letter"
-      >
+      <div class="grid-letter">
         <div class="p-box-1" />
         <div class="p-box-2" />
       </div>
