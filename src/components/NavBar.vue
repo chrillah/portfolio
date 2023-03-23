@@ -10,36 +10,32 @@
         fill="var(--button)"
         class="hamburger"
         viewBox="0 0 100 100"
-        width="40"
+        width="30"
       >
         <rect class="line top" width="80" height="3" x="10" y="35" />
         <rect class="line bottom" width="80" height="3" x="10" y="65" />
       </svg>
     </button>
   </nav>
-  <!-- <nav :class="menu">
-    <div class="button-container">
-      <div class="mobile-btn-container">
-        <button v-if="isClosed" @click="openMenu" class="close-menu-btn">
-          --
-        </button>
-        <button v-if="!isClosed" @click="closeMenu" class="close-menu-btn">
-          X
-        </button>
-      </div>
-    </div>
-    <ul :style="{ display: displays }" class="links-container">
-      <li class="link-item">
-        <RouterLink @click="closeMenu" class="link" to="/">Hem</RouterLink>
+  <div :style="{ display: display }" class="menu-container">
+    <ul class="links-container">
+      <li class="link-item" @click="closeMenu">
+        <RouterLink class="link-item-container" to="/frontend"
+          ><div class="black-arrow"></div><p class="link-text">Frontend</p></RouterLink
+        >
       </li>
-      <li class="link-item">
-        <RouterLink @click="closeMenu" class="link" to="/about">Om</RouterLink>
+      <li class="link-item" @click="closeMenu">
+        <RouterLink class="link-item-container" to="/ux"
+          ><div class="black-arrow"></div><p class="link-text">UX</p></RouterLink
+        >
       </li>
-      <li class="link-item">
-        <RouterLink @click="closeMenu" class="link" to="/work">Jobb</RouterLink>
+      <li class="link-item" @click="closeMenu">
+        <RouterLink class="link-item-container" to="/graphic-design"
+          ><div class="black-arrow"></div><p class="link-text">Graphic Design</p></RouterLink
+        >
       </li>
     </ul>
-  </nav> -->
+  </div>
   <RouterView />
   <FooterSection />
 </template>
@@ -52,7 +48,8 @@
     data() {
       return {
         expanded: false,
-        menu: "nav-bar invert-color",
+        menu: 'nav-bar invert-color',
+        display: 'none'
         // menu: "nav-bar invert-color",
         // isClosed: true,
         // displays: 'none'
@@ -60,12 +57,18 @@
     },
     methods: {
       expand() {
-        if(this.expanded === false){
-          this.expanded = true;
-        } else{
-          this.expanded = false;
+        if (this.expanded === false && this.display === 'none') {
+          this.expanded = true
+          this.display = 'block'
+        } else {
+          this.expanded = false
+          this.display = 'none'
         }
-    }
+      },
+      closeMenu() {
+        this.expanded = false
+        this.display = 'none'
+      }
       // expand() {
       //   this.isOpen = true
       // }
@@ -82,7 +85,7 @@
     }
   }
 </script>
-<style>
+<style scoped>
   nav,
   svg {
     margin: 0;
@@ -91,30 +94,22 @@
   .nav-bar {
     position: fixed;
     z-index: 100;
-    /* top: 0.3rem; */
     right: 0;
-
-    /* margin: 0 auto;
-    position: fixed;
-    z-index: 100;
-    right: 0; */
   }
 
   .nav-button {
-    position: relative;
-    left: 0;
     --button: var(--primary-color, #000000);
 
     border: 1px solid var(--button);
   }
 
   .nav-button .line {
-    transition: y 200ms ease-in 200ms, rotate 200ms ease-in, opacity 0ms 200ms;
+    transition: y 100ms ease-in 100ms, rotate 100ms ease-in, opacity 0ms 100ms;
     transform-origin: center;
   }
 
   .nav-button[aria-expanded='true'] .line {
-    transition: y 200ms ease-in, rotate 200ms ease-in 200ms, opacity 0ms 200ms;
+    transition: y 100ms ease-in, rotate 100ms ease-in 100ms, opacity 0ms 100ms;
   }
 
   .nav-button[aria-expanded='true'] :is(.top, .bottom) {
@@ -133,87 +128,43 @@
     rotate: -45deg;
   }
 
-  .nav-back-ground {
-    /* width: 100%;
-    background-color: var(--primary-bg); */
-  }
-
   .invert-color {
     filter: invert(1);
     mix-blend-mode: difference;
   }
-
-  .logo {
-    /* display: none;
-    padding: 0 0.3rem;
-    padding-top: 0.3rem;
-    box-sizing: border-box;
-    height: 30px;
-    margin: 0; */
+  .menu-container {
+    width: 100%;
+    background-color: var(--primary-bg);
+    position: fixed;
+    z-index: 99;
+    min-height: 100svh;
+    transition: width 200ms ease-in;
   }
-
-  .button-container {
-    /* color: #000000;
-    filter: invert(1);
-    mix-blend-mode: difference; */
-    /* display: flex;
-    justify-content: space-between; */
-  }
-
-  .close-menu-btn {
-    /* display: flex;
-    justify-content: space-between; */
-    /* border-left: var(--border); */
-
-    /* cursor: pointer;
-    border: 1px solid;
-    padding: 0.6rem 0.8rem; */
-  }
-
   .links-container {
-    /* grid-template-columns: 1fr;
-    min-height: 100svh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
-
-  .link-item {
-    /* position: relative;
-    top: 0px;
-    animation-name: open;
-    animation-duration: 0.1s;
-    border-top: var(--border);
-    text-align: center;
-    background-color: var(--primary-bg); */
+.link-item-container{
+  display: inline-block;
+}
+  .black-arrow{
+      /* margin: .3rem; */
+  padding: 1rem;
+  display: block;
+  background-image: url('/assets/img/portfolio_vertical-black-arrow.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 46px;
+  width: 50px; */
+  width: 5px;
   }
-
-  /* @keyframes open {
-    from {
-      background-color: var(--primary-bg);
-      top: -300px;
-    }
-
-    to {
-      background-color: #ffffff;
-      top: 0;
-    }
-  } */
-
-  .link {
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: 900;
+  .link-item p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
     text-decoration: none;
-    color: var(--primary-color); */
-  }
-
-  @media (min-width: 769px) {
-    /* .mobile-btn-container{
-      display: none;
-    } */
-
-    /* .links-container {
-      display: grid;
-    } */
+    color: var(--primary-color);
+    font-size: 2rem;
   }
 </style>

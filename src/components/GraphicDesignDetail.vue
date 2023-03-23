@@ -42,7 +42,7 @@
   /* padding-top: 3rem; */
 }
 .back{
-  margin: .3rem;
+  /* margin: .3rem; */
   padding: 1rem;
   display: block;
   background-image: url('/assets/img/portfolio_black-arrow.png');

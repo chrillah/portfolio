@@ -1,14 +1,14 @@
 <template>
   <div class="about-wrapper">
     <div class="about-container">
-      <!-- <div class="top-grid-container">
+      <div class="top-grid-container">
         <div class="hi-item">
           <h1 class="big-header">HI!</h1>
         </div>
         <div class="name-container">
           <h3 class="name-header">My name is <span>Christopher</span></h3>
         </div>
-      </div> -->
+      </div>
       <div class="bottom-grid-container">
         <div class="presentation-container">
           <div class="presentation-items">
