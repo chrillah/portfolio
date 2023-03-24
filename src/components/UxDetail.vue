@@ -64,19 +64,6 @@
 .detail-wrapper{
   /* padding-top: 3rem; */
 }
-.back{
-  /* margin: .3rem; */
-  padding: 1rem;
-  display: block;
-  background-image: url('/assets/img/portfolio_black-arrow.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* height: 46px;
-  width: 50px; */
-  width: 5px;
-}
-
 .detail-top-container{
 }
 
