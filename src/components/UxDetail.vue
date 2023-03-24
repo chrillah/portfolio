@@ -1,6 +1,27 @@
 <template>
   <div class="detail-wrapper">
-    <RouterLink id="top" class="back" to="/" />
+    <RouterLink id="top" to="/" >
+      <svg
+            class="black-arrow"
+            id="Layer_1"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 50 46"
+          >
+            <polyline
+              id="POINT"
+              class="black-arrow-detail"
+              points="23.82 .35 .71 23.46 23.82 46.57"
+            />
+            <line
+              id="LINE"
+              class="black-arrow-detail"
+              x1=".71"
+              y1="23.46"
+              x2="50.71"
+              y2="23.46"
+            />
+          </svg></RouterLink>
     <div class="detail-top-container">
       <section class="header-section-item">
         <h1 class="header-section">{{ detailTitle }}</h1>

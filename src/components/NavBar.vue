@@ -20,18 +20,81 @@
   <div :style="{ display: display }" class="menu-container">
     <ul class="links-container">
       <li class="link-item" @click="closeMenu">
-        <RouterLink class="link-item-container" to="/frontend"
-          ><div class="black-arrow"></div><p class="link-text">Frontend</p></RouterLink
+        <RouterLink class="link-item-container" to="/frontend">
+          <svg
+            class="black-arrow"
+            id="Layer_1"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 50 46"
+          >
+            <polyline
+              id="POINT"
+              class="black-arrow-detail"
+              points="23.82 .35 .71 23.46 23.82 46.57"
+            />
+            <line
+              id="LINE"
+              class="black-arrow-detail"
+              x1=".71"
+              y1="23.46"
+              x2="50.71"
+              y2="23.46"
+            />
+          </svg>
+          <p class="link-text">Frontend</p></RouterLink
         >
       </li>
       <li class="link-item" @click="closeMenu">
-        <RouterLink class="link-item-container" to="/ux"
-          ><div class="black-arrow"></div><p class="link-text">UX</p></RouterLink
+        <RouterLink class="link-item-container" to="/ux">
+          <svg
+            class="black-arrow"
+            id="Layer_1"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 50 46"
+          >
+            <polyline
+              id="POINT"
+              class="black-arrow-detail"
+              points="23.82 .35 .71 23.46 23.82 46.57"
+            />
+            <line
+              id="LINE"
+              class="black-arrow-detail"
+              x1=".71"
+              y1="23.46"
+              x2="50.71"
+              y2="23.46"
+            />
+          </svg>
+          <p class="link-text">UX</p></RouterLink
         >
       </li>
       <li class="link-item" @click="closeMenu">
-        <RouterLink class="link-item-container" to="/graphic-design"
-          ><div class="black-arrow"></div><p class="link-text">Graphic Design</p></RouterLink
+        <RouterLink class="link-item-container" to="/graphic-design">
+          <svg
+            class="black-arrow"
+            id="Layer_1"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 50 46"
+          >
+            <polyline
+              id="POINT"
+              class="black-arrow-detail"
+              points="23.82 .35 .71 23.46 23.82 46.57"
+            />
+            <line
+              id="LINE"
+              class="black-arrow-detail"
+              x1=".71"
+              y1="23.46"
+              x2="50.71"
+              y2="23.46"
+            />
+          </svg>
+          <p class="link-text">Graphic Design</p></RouterLink
         >
       </li>
     </ul>
@@ -86,6 +149,11 @@
   }
 </script>
 <style scoped>
+  .cls-1 {
+    fill: none;
+    stroke: #000;
+    stroke-miterlimit: 10;
+  }
   nav,
   svg {
     margin: 0;
@@ -145,20 +213,13 @@
     flex-direction: column;
     justify-content: space-between;
   }
-.link-item-container{
-  display: inline-block;
-}
-  .black-arrow{
-      /* margin: .3rem; */
-  padding: 1rem;
-  display: block;
-  background-image: url('/assets/img/portfolio_vertical-black-arrow.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  /* height: 46px;
-  width: 50px; */
-  width: 5px;
+  .link-item-container {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+  }
+
+  .black-arrow {
+    rotate: 180deg;
   }
   .link-item p {
     font-family: 'Raleway', sans-serif;
