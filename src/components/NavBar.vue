@@ -209,13 +209,21 @@
     transition: width 200ms ease-in;
   }
   .links-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
+
+  .link-item{
+    padding: 1rem;
+  }
   .link-item-container {
     display: grid;
-    grid-template-columns: 60px 1fr;
+    grid-template-columns: 50px 1fr;
   }
 
   .black-arrow {
