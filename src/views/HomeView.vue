@@ -1,6 +1,6 @@
 <template>
   <HeroSection />
-  <AboutMe />
+  <AboutMeSection />
   <EducationSection />
   <WorkExperience />
   <!-- <div
@@ -10,13 +10,13 @@
 </template>
 <script>
   import HeroSection from '../components/HeroSection.vue'
-  import AboutMe from '../components/AboutMe.vue'
+  import AboutMeSection from '../components/AboutMeSection.vue'
   import EducationSection from '../components/EducationSection.vue';
   import WorkExperience from '../components/WorkExperience.vue';
   export default {
     components: {
       HeroSection,
-      AboutMe,
+      AboutMeSection,
       EducationSection,
       WorkExperience
     }
