@@ -3,6 +3,20 @@
     data() {
       return {
         color: 'var(--primary-bg)',
+        attributes : [
+          {
+            id: 1,
+            title : "Frontend"
+          },
+          {
+            id: 2,
+            title : "UX"
+          },
+          {
+            id: 3,
+            title : "Graphic Design"
+          }
+        ],
         letters: [
           {
             id: 1,
@@ -32,6 +46,12 @@
 </script>
 <template>
   <div class="hero-wrapper">
+    <div class="hero-presentation-container">
+      <ul class="attributes-container">
+        <li class="attribute-item" v-for="attribute in attributes" :key="attribute.id">{{ attribute.title }}</li>
+      </ul>
+      <h class="hero-title">Christopher Rönnberg</h>
+    </div>
     <!-- <h1 class="hero-header">web</h1> -->
     <div class="hero-grid-container">
       <div class="grid-letter">
@@ -75,13 +95,73 @@
 <script></script>
 <style>
   .hero-wrapper {
+    border: 1px solid var(--primary-color);
+    display: grid;
+    grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
     /* position: relative; */
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
     /* display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column; */
     /* margin-top: 1rem; */
+  }
+
+  @media (min-width: 768px) {
+    .hero-wrapper{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .hero-presentation-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-right: none;
+  }
+
+  @media (min-width: 768px) {
+    .hero-presentation-container{
+      flex-direction: column;
+      border-right: 1px solid var(--primary-color);
+    }
+  }
+  .attributes-container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 1px solid var(--primary-color);
+    border-bottom: none;
+  }
+
+  @media (min-width: 768px) {
+    .attributes-container{
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      border-right: none;
+      border-bottom: 1px solid var(--primary-color);
+    }
+  }
+
+  .attribute-item{
+    padding: 1rem;
+  }
+  .hero-title{
+    padding: 3rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+    word-break: break-all;
+  }
+
+  @media (min-width: 522px) {
+    .hero-title{
+      font-size: 7rem;
+    }
   }
 
   .hero-header {
@@ -94,17 +174,18 @@
     color: var(--primary-bg);
   }
   .hero-grid-container {
-    margin: 0 auto;
+    background-color: var(--primary-color);
+    /* margin: 0 auto; */
     max-width: 900px;
-    border: 12px solid var(--primary-color);
+    /* border: 12px solid var(--primary-color); */
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
   }
 
   @media (min-width: 768px) {
     .hero-grid-container {
-      padding: 1rem 0;
+      /* padding: 1rem 0; */
       /* grid-template-columns: repeat(9, 1fr);
     grid-template-rows: none; */
     }

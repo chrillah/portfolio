@@ -1,6 +1,9 @@
 <template>
   <div class="detail-wrapper">
-    <RouterLink id="top" to="/" >
+    <div class="detail-top-container">
+      <div class="detail-top-item">
+        <section class="header-section-item">
+          <RouterLink id="top" to="/" >
       <svg
             class="black-arrow"
             id="Layer_1"
@@ -22,10 +25,10 @@
               y2="23.46"
             />
           </svg></RouterLink>
-    <div class="detail-top-container">
-      <section class="header-section-item">
         <h1 class="header-section">{{ detailTitle }}</h1>
       </section>
+      <div class="image-section-container" />
+      </div>
       <div class="information-section-container">
         <div class="description-container">
           <p>{{ detailDescription }}</p>
@@ -58,42 +61,44 @@
           <p>{{ project.description }}</p>
           <img class="symbol-img" src="/assets/img/portfolio_white-arrow.png" alt="A white vector arrow">
         </div>
-        <a target="_blank" :href="project.link" class="action-btn project-img-container"><img class="project-img" :src="project.image" alt="Project image"></a>
+        <div class="project-img-container"><img class="project-img" :src="project.image" alt="Project image" />
+          <a target="_blank" :href="project.link" class="action-btn" >Link</a>
+        </div>
       </div>
     </div>
-    <div class="education-button-container">
+    <!-- <div class="education-button-container">
       <RouterLink to="#top" class="action-btn to-the-top">To the top</RouterLink>
-    </div>
+    </div> -->
   </div>
 </template>
 <style scoped>
 .detail-wrapper{
   /* padding-top: 3rem; */
 }
-.back{
-  /* margin: .3rem; */
-  padding: 1rem;
-  display: block;
-  background-image: url('/assets/img/portfolio_black-arrow.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* height: 46px;
-  width: 50px; */
-  width: 5px;
-}
-
 .detail-top-container{
 }
 
+.detail-top-item{
+  border: 1px solid var(--primary-color);
+  border-bottom: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 .header-section-item{
-
+  border-right: 1px solid var(--primary-color);
 }
 .header-section{
   font-family: 'Raleway', sans-serif;
   margin: 0;
   padding-top: 3rem;
   font-size: 3rem;
+}
+
+.image-section-container{
+  background-color: var(--primary-color);
+  /* background-image: url('/assets/img/waste_of_space.png');
+  background-position: center;
+  background-size: cover; */
 }
 
 @media (min-width:768px){
@@ -117,7 +122,7 @@
 .description-container{
   font-family: 'Raleway', sans-serif;
   border-right: 1px solid var(--primary-color);
-  padding: .3rem;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,6 +130,7 @@
 }
 
 .description-container p{
+  font-size: .8rem;
   max-width: 600px;
 }
 

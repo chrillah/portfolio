@@ -17,11 +17,11 @@
         class="education-item action-btn"
       >
         <div class="education-detail-container">
-          <ul class="tools-container">
+          <!-- <ul class="tools-container">
             <li class="tool-item" v-for="tool in education.tools" :key="tool.id">
               {{ tool.tool }}
             </li>
-          </ul>
+          </ul> -->
           <div class="education-text-info">
             <h1 class="education-title-header">{{ education.title }}</h1>
             <h5 class="school-header">{{ education.school }}</h5>
@@ -124,7 +124,8 @@
     mix-blend-mode: difference;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: flex-end;
   }
 
   .tools-container{
@@ -171,7 +172,7 @@
       setInterval(() => {
         this.currentNumberIndex =
           (this.currentNumberIndex + 1) % this.numbers.length
-      }, 900)
+      }, 2000)
     },
     data() {
       return {
