@@ -119,12 +119,14 @@
     align-items: center;
     flex-direction: row;
     border-right: none;
+    border-bottom: 1px solid var(--primary-color);
   }
 
   @media (min-width: 768px) {
     .hero-presentation-container{
       flex-direction: column;
       border-right: 1px solid var(--primary-color);
+      border-bottom: none;
     }
   }
   .attributes-container{
