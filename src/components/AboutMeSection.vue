@@ -2,10 +2,14 @@
   <div class="about-wrapper">
     <div class="about-container">
       <div class="top-container">
-        <div class="hi-item">
-          <h1 class="big-header">HI!</h1>
+        <div class="intro-container">
+          <h1 class="intro-title">About me</h1>
         </div>
-        <div class="gradient-conainer" />
+        <div class="symbols-container">
+          <div class="outer-circle">
+            <div class="inner-circle"></div>
+          </div>
+        </div>
         <!-- <div class="name-container">
       <h3 class="name-header">My name is <span>Christopher</span></h3>
     </div> -->
@@ -47,7 +51,7 @@
 <style>
   .about-wrapper {
     /* padding-top: 2rem; */
-    background-color: var(--secondary-color);
+    background-color: var(--third-bg);
     --bg-color: var(--primary-bg);
     /* border-bottom: 1px solid var(--primary-color); */
   }
@@ -62,25 +66,26 @@
     border: 1px solid var(--primary-color);
     border-top: none;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     /* width: 100%; */
     /* position: relative; */
   }
 
-  .hi-item {
+  .intro-container {
     background-color: var(--bg-color);
     /* max-width: 200px;
     padding: 0.3rem; */
     /* border: 1px solid var(--primary-color); */
     border-right: 1px solid var(--primary-color);
   }
-  .big-header {
-    text-align: center;
+
+  /* .intro-title {
     font-family: 'Raleway', sans-serif;
-    font-size: 9rem;
+    font-size: 6rem;
     padding: 0;
+    padding: 3rem;
     margin: 0;
-  }
+  } */
 
   /* @media (min-width: 600px) {
     .hi-item{
@@ -90,6 +95,56 @@
       font-size: 12rem;
     }
   } */
+
+  .symbols-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .outer-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-bg);
+    width: 100%;
+    height: 110px;
+    border-radius: 100%;
+    overflow: hidden;
+    animation: blink 18s infinite;
+  }
+
+  @keyframes blink {
+    0%{
+      height: 110px;
+    }
+    5%{
+      height: 0px;
+    }
+    15%{
+      height: 110px;
+    }
+    20%{
+      height: 0px;
+    }
+    25%{
+      height: 130px;
+    }
+    50%{
+      height: 0px;
+    }
+    100%{
+      height: 110px;
+    }
+  }
+
+  .inner-circle{
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+  }
 
   .name-container {
     /* position: relative;

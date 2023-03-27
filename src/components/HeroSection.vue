@@ -234,7 +234,7 @@
       border: 1px solid var(--primary-color);
     }
     50% {
-      border: 12px solid var(--primary-color);
+      border: 10px solid var(--primary-color);
     }
     75% {
       border: 1px solid var(--primary-color);
