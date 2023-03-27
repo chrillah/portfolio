@@ -11,7 +11,7 @@
   --fourth-bg: #238C6E;
   --fifth-bg: #F3B3D6;
 
-  --gradient: linear-gradient(45deg,var(--fifth-bg),var(--secondary-color),var(--primary-bg),var(--primary-color));
+  --gradient: linear-gradient(45deg,var(--fifth-bg),var(--secondary-color),var(--fourth-bg),var(--primary-bg),var(--primary-color));
 }
 
 body {
@@ -106,8 +106,9 @@ a{
 .gradient-container{
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(45deg,#F3B3D6,#B7AEF1,#F2EEEB,#000000,#B7AEF1);
-  background-size: 300%;
+  /* background-image: linear-gradient(45deg,#F3B3D6,#B7AEF1,#F2EEEB,#000000,#B7AEF1); */
+  background-image: var(--gradient);
+  background-size: 400%;
   animation: gradient-animation 25s infinite alternate;
 }
 

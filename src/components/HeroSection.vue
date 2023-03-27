@@ -176,7 +176,7 @@
     color: var(--primary-bg);
   }
   .hero-grid-container {
-    background-color: var(--primary-color);
+    /* background-image: var(--gradient); */
     /* margin: 0 auto; */
     max-width: 900px;
     /* border: 12px solid var(--primary-color); */

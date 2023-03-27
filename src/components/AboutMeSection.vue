@@ -53,7 +53,6 @@
 </template>
 <style>
   .about-wrapper {
-    background-color: var(--third-bg);
     --bg-color: var(--primary-bg);
   }
   .about-container {
@@ -130,6 +129,7 @@
   }
 
   .symbols-container {
+    background-color: var(--third-bg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -237,7 +237,7 @@
     padding: 0.3rem 0;
   }
   .skills li {
-    font-size: 0.8rem;
+    font-size: 2rem;
     font-weight: 700;
     margin: 0.3rem;
     padding: 0.3rem 0;
