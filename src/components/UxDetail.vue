@@ -1,6 +1,9 @@
 <template>
   <div class="detail-wrapper">
-    <RouterLink id="top" to="/" >
+    <div class="detail-top-container">
+      <div class="detail-top-item">
+        <section class="header-section-item">
+          <RouterLink id="top" to="/" >
       <svg
             class="black-arrow"
             id="Layer_1"
@@ -22,10 +25,10 @@
               y2="23.46"
             />
           </svg></RouterLink>
-    <div class="detail-top-container">
-      <section class="header-section-item">
         <h1 class="header-section">{{ detailTitle }}</h1>
       </section>
+      <div class="gradient-container" />
+      </div>
       <div class="information-section-container">
         <div class="description-container">
           <p>{{ detailDescription }}</p>
@@ -64,7 +67,11 @@
 .detail-wrapper{
   /* padding-top: 3rem; */
 }
-.detail-top-container{
+.detail-top-item{
+  border: 1px solid var(--primary-color);
+  border-bottom: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .header-section-item{

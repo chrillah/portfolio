@@ -1,20 +1,20 @@
 <template>
   <div class="education-wrapper">
-    <div class="education-intro-section">
-      <h1 class="intro-title">Education</h1>
-      <div class="intro-presentation">
-        <p>Frontend development</p>
-        <p>UX</p>
-        <p>Graphic design</p>
-      </div>
-    </div>
     <div class="education-container">
+      <div class="education-intro-section">
+        <h1 class="intro-title">Education</h1>
+        <!-- <div class="intro-presentation">
+          <p>Frontend development</p>
+          <p>UX</p>
+          <p>Graphic design</p>
+        </div> -->
+      </div>
       <RouterLink
         :to="education.view"
         v-for="education in listOfEducation"
         :key="education.id"
         :style="{ backgroundImage: `url(${education.images[currentImage]})` }"
-        class="education-item action-btn"
+        class="education-item"
       >
         <div class="education-detail-container">
           <!-- <ul class="tools-container">
@@ -33,34 +33,40 @@
 </template>
 <style>
   .education-wrapper {
-    padding: 5rem 0;
-    /* width: 100%; */
-    /* min-height: 50rem; */
-    background-color: var(--third-bg);
+    /* padding: 5rem 0;
+    background-color: var(--third-bg); */
   }
 
   .education-intro-section {
-    margin: 0.6rem;
-    padding: 0.3rem;
-  }
-
-  .section-header {
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
-    font-size: 3.5rem;
-    color: var(--primary-bg);
+    /* margin: 0.6rem;
+    padding: 0.3rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .intro-presentation {
+    max-width: 450px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+
+  @media (min-width: 914px) {
+    .intro-presentation {
+    max-width: 450px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    max-width: 400px;
+  }
   }
 
   .intro-presentation p {
     font-family: 'Raleway', sans-serif;
     margin: 0;
-    color: var(--primary-bg);
     font-size: 0.8rem;
   }
 
@@ -71,45 +77,42 @@
   }
 
   .education-container {
-    margin: 5rem auto;
-    max-width: 470px;
-    padding: 0.6rem;
+    /* margin: 5rem auto;
+    max-width: 470px; */
+    /* padding: 0.6rem; */
     display: grid;
-    gap: 3rem;
+    /* gap: 3rem; */
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: auto 1fr 1fr 1fr;
   }
 
-  @media (min-width: 1200px) {
-    .education-container {
-      padding: 0;
-      gap: 0;
-      max-width: 1480px;
-      margin: 0rem auto;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 1fr;
+  @media (min-width: 578px) {
+    .education-container{
+      grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     }
   }
 
   .education-item {
-    margin: 0.3rem;
+    /* margin: 0.3rem;
     padding: 0.1rem;
-    min-height: 300px;
+    min-height: 300px; */
     /* max-width: 400px; */
+    min-height: 550px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     /* position: relative; */
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
   }
 
-  @media (min-width: 425px) {
+  /* @media (min-width: 425px) {
     .education-item {
       padding: 0.5rem;
       min-height: 400px;
       margin: 2rem;
     }
-  }
+  } */
 
   @media (min-width: 1440px) {
     .education-item {
@@ -124,23 +127,18 @@
     mix-blend-mode: difference;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     justify-content: flex-end;
   }
 
-  .tools-container{
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
+  .tools-container {
   }
 
-  .tool-item{
-    font-size: .8rem;
+  .tool-item {
+    font-size: 0.8rem;
     text-align: left;
   }
 
-  .education-text-info{
+  .education-text-info {
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -172,7 +170,7 @@
       setInterval(() => {
         this.currentNumberIndex =
           (this.currentNumberIndex + 1) % this.numbers.length
-      }, 2000)
+      }, 3000)
     },
     data() {
       return {

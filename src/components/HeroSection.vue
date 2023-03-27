@@ -245,7 +245,7 @@
   }
 
   .p-box-1 {
-    background-color: var(--primary-color);
+    background-color: var(--third-bg);
     width: 40px;
     height: 40px;
     position: absolute;
@@ -265,7 +265,7 @@
   }
 
   .o-box {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     width: 50px;
     height: 50px;
     position: absolute;
@@ -294,7 +294,7 @@
   }
 
   .r-box-1 {
-    background-color: var(--primary-color);
+    background-color: var(--third-bg);
     width: 40px;
     height: 40px;
     position: absolute;

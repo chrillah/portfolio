@@ -1,6 +1,10 @@
 <template>
   <div class="detail-wrapper">
-    <RouterLink id="top" to="/" >
+
+    <div class="detail-top-container">
+      <div class="detail-top-item">
+        <section class="header-section-item">
+          <RouterLink id="top" to="/" >
       <svg
             class="black-arrow"
             id="Layer_1"
@@ -22,10 +26,10 @@
               y2="23.46"
             />
           </svg></RouterLink>
-    <div class="detail-top-container">
-      <section class="header-section-item">
         <h1 class="header-section">{{ detailTitle }}</h1>
       </section>
+      <div class="gradient-container" />
+      </div>
       <div class="information-section-container">
         <div class="description-container">
           <p>{{ detailDescription }}</p>
@@ -78,14 +82,31 @@
 .detail-top-container{
 }
 
-.header-section-item{
+.detail-top-item{
+  border: 1px solid var(--primary-color);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
 
+@media (min-width: 425px) {
+  .detail-top-item{
+  border: 1px solid var(--primary-color);
+  border-bottom: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.header-section-item{
+  border-right: 1px solid var(--primary-color);
+}
 }
 .header-section{
   font-family: 'Raleway', sans-serif;
   margin: 0;
   padding-top: 3rem;
   font-size: 4rem;
+  word-break: break-all;
 }
 
 @media (min-width:425px){

@@ -83,6 +83,7 @@ a{
   padding: 0;
   padding: 2.5rem;
   margin: 0;
+  word-break: break-all;
 }
 
 @media (min-width: 522px) {
@@ -100,4 +101,21 @@ a{
   fill: none;
   stroke: var(--primary-color);
   stroke-miterlimit: 10;
+}
+
+.gradient-container{
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(45deg,#F3B3D6,#B7AEF1,#F2EEEB,#000000,#B7AEF1);
+  background-size: 300%;
+  animation: gradient-animation 25s infinite alternate;
+}
+
+@keyframes gradient-animation{
+  0%{
+    background-position: left;
+  }
+  100%{
+    background-position: right;
+  }
 }

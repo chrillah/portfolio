@@ -27,7 +27,7 @@
           </svg></RouterLink>
         <h1 class="header-section">{{ detailTitle }}</h1>
       </section>
-      <div class="image-section-container" />
+      <div class="gradient-container" />
       </div>
       <div class="information-section-container">
         <div class="description-container">
@@ -80,25 +80,28 @@
 
 .detail-top-item{
   border: 1px solid var(--primary-color);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+@media (min-width: 425px) {
+  .detail-top-item{
+  border: 1px solid var(--primary-color);
   border-bottom: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 .header-section-item{
   border-right: 1px solid var(--primary-color);
+}
 }
 .header-section{
   font-family: 'Raleway', sans-serif;
   margin: 0;
   padding-top: 3rem;
   font-size: 3rem;
-}
-
-.image-section-container{
-  background-color: var(--primary-color);
-  /* background-image: url('/assets/img/waste_of_space.png');
-  background-position: center;
-  background-size: cover; */
+  word-break: break-all;
 }
 
 @media (min-width:768px){

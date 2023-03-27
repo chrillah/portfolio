@@ -76,7 +76,7 @@
 
   @media (min-width: 768px) {
     .top-container {
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 1fr 1fr;
       grid-template-rows: none;
     }
     .intro-container {
@@ -178,25 +178,6 @@
     width: 100px;
     height: 100px;
   }
-
-  .gradient-container{
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(45deg,#F3B3D6,#B7AEF1,#F2EEEB,#000000,#B7AEF1);
-    background-size: 300%;
-    animation: gradient-animation 15s infinite alternate;
-  }
-
-  @keyframes gradient-animation{
-    0%{
-      background-position: left;
-    }
-    100%{
-      background-position: right;
-    }
-  }
-
-
   .name-container {
     background-color: var(--bg-color);
     padding: 0.3rem;
