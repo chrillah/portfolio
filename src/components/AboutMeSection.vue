@@ -3,30 +3,33 @@
     <div class="about-container">
       <div class="top-container">
         <div class="hi-item">
-      <h1 class="big-header">HI!</h1>
-    </div>
-    <div class="name-container">
+          <h1 class="big-header">HI!</h1>
+        </div>
+        <div class="gradient-conainer" />
+        <!-- <div class="name-container">
       <h3 class="name-header">My name is <span>Christopher</span></h3>
-    </div>
+    </div> -->
       </div>
 
-
-    <div class="presentation-items">
-      <p class="presentation-text">
-        By combining my knowledge of UX, graphic design, and frontend
-        development, I can create innovative and user-friendly digital products
-        that not only look great but also function well for users.
-      </p>
-      <p class="presentation-text">
-        I am described as reliable, resourceful, and easy-going, where my
-        natural calmness rubs off and creates a focused working environment.
-      </p>
-      <p class="presentation-text">Stepping out of my comfort zone and jumping into the unknown drives me.
-      </p>
-    </div>
-    <div class="skills-container">
+      <div class="bottom-container">
+        <div class="presentation-items">
+          <p class="presentation-text">
+            By combining my knowledge of UX, graphic design, and frontend
+            development, I can create innovative and user-friendly digital
+            products that not only look great but also function well for users.
+          </p>
+          <p class="presentation-text">
+            I am described as reliable, resourceful, and easy-going, where my
+            natural calmness rubs off and creates a focused working environment.
+          </p>
+          <p class="presentation-text">
+            Stepping out of my comfort zone and jumping into the unknown drives
+            me.
+          </p>
+        </div>
+        <div class="skills-container">
           <div class="skills-items">
-            <h1 class="skills-header">Some of my skills</h1>
+            <p class="skills-header">Some of my skills</p>
             <ul class="skills">
               <li>Adobe CC</li>
               <li>Figma</li>
@@ -37,6 +40,7 @@
             </ul>
           </div>
         </div>
+      </div>
     </div>
   </div>
 </template>
@@ -54,7 +58,11 @@
     flex-direction: column; */
   }
 
-  .top-container{
+  .top-container {
+    border: 1px solid var(--primary-color);
+    border-top: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     /* width: 100%; */
     /* position: relative; */
   }
@@ -64,6 +72,7 @@
     /* max-width: 200px;
     padding: 0.3rem; */
     /* border: 1px solid var(--primary-color); */
+    border-right: 1px solid var(--primary-color);
   }
   .big-header {
     text-align: center;
@@ -116,9 +125,15 @@
       font-size: 3rem;
     }
   } */
+  .bottom-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border: 1px solid var(--primary-color);
+    border-top: none;
+  }
   .presentation-items {
     background-color: var(--bg-color);
-    /* border: 1px solid var(--primary-color); */
+    border-right: 1px solid var(--primary-color);
     padding: 0.6rem;
     display: flex;
     justify-content: center;

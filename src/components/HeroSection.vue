@@ -47,9 +47,9 @@
 <template>
   <div class="hero-wrapper">
     <div class="hero-presentation-container">
-      <ul class="attributes-container">
+      <!-- <ul class="attributes-container">
         <li class="attribute-item" v-for="attribute in attributes" :key="attribute.id">{{ attribute.title }}</li>
-      </ul>
+      </ul> -->
       <h class="hero-title">Christopher Rönnberg</h>
     </div>
     <!-- <h1 class="hero-header">web</h1> -->
