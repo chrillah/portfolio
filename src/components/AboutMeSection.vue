@@ -5,31 +5,34 @@
         <div class="intro-container">
           <h1 class="intro-title">About me</h1>
         </div>
-        <div class="symbols-container">
-          <div class="outer-circle">
-            <div class="inner-circle"></div>
+        <div class="middle-container">
+          <div class="symbols-container">
+            <div class="outer-circle">
+              <div class="inner-circle" />
+            </div>
+          </div>
+          <div class="presentation-items">
+            <p class="presentation-text">
+              By combining my knowledge of UX, graphic design, and frontend
+              development, I can create innovative and user-friendly digital
+              products that not only look great but also function well for
+              users.
+            </p>
+            <p class="presentation-text">
+              I am described as reliable, resourceful, and easy-going, where my
+              natural calmness rubs off and creates a focused working
+              environment.
+            </p>
+            <p class="presentation-text">
+              Stepping out of my comfort zone and jumping into the unknown
+              drives me.
+            </p>
           </div>
         </div>
-        <!-- <div class="name-container">
-      <h3 class="name-header">My name is <span>Christopher</span></h3>
-    </div> -->
       </div>
-
       <div class="bottom-container">
-        <div class="presentation-items">
-          <p class="presentation-text">
-            By combining my knowledge of UX, graphic design, and frontend
-            development, I can create innovative and user-friendly digital
-            products that not only look great but also function well for users.
-          </p>
-          <p class="presentation-text">
-            I am described as reliable, resourceful, and easy-going, where my
-            natural calmness rubs off and creates a focused working environment.
-          </p>
-          <p class="presentation-text">
-            Stepping out of my comfort zone and jumping into the unknown drives
-            me.
-          </p>
+        <div class="symbols-container">
+          <div class="gradient-container"></div>
         </div>
         <div class="skills-container">
           <div class="skills-items">
@@ -50,33 +53,35 @@
 </template>
 <style>
   .about-wrapper {
-    /* padding-top: 2rem; */
     background-color: var(--third-bg);
     --bg-color: var(--primary-bg);
-    /* border-bottom: 1px solid var(--primary-color); */
   }
   .about-container {
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
   }
 
   .top-container {
     border: 1px solid var(--primary-color);
     border-top: none;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    /* width: 100%; */
-    /* position: relative; */
+    grid-template-rows: auto 2fr;
   }
 
   .intro-container {
     background-color: var(--bg-color);
-    /* max-width: 200px;
-    padding: 0.3rem; */
-    /* border: 1px solid var(--primary-color); */
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .top-container {
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: none;
+    }
+    .intro-container {
     border-right: 1px solid var(--primary-color);
+  }
   }
 
   /* .intro-title {
@@ -96,14 +101,42 @@
     }
   } */
 
-  .symbols-container{
+  .middle-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    border-top: none;
+  }
+  @media (min-width: 768px) {
+    .middle-container {
+    grid-template-rows: 1fr 1fr;
+  }
+  }
+  .presentation-items {
+    background-color: var(--bg-color);
+    border-top: 1px solid var(--primary-color);
+    padding: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .presentation-text {
+    max-width: 500px;
+    line-height: 1rem;
+    font-family: 'Raleway', sans-serif;
+    margin: 0.3rem;
+    font-size: 0.9rem;
+    padding-bottom: 1rem;
+  }
+
+  .symbols-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
 
-  .outer-circle{
+  .outer-circle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,48 +149,60 @@
   }
 
   @keyframes blink {
-    0%{
+    0% {
       height: 110px;
     }
-    5%{
+    5% {
       height: 0px;
     }
-    15%{
+    15% {
       height: 110px;
     }
-    20%{
+    20% {
       height: 0px;
     }
-    25%{
+    25% {
       height: 130px;
     }
-    50%{
+    50% {
       height: 0px;
     }
-    100%{
+    100% {
       height: 110px;
     }
   }
 
-  .inner-circle{
+  .inner-circle {
     background-color: var(--primary-color);
     border-radius: 100%;
     width: 100px;
     height: 100px;
   }
 
+  .gradient-container{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(45deg,#F3B3D6,#B7AEF1,#F2EEEB,#000000,#B7AEF1);
+    background-size: 300%;
+    animation: gradient-animation 15s infinite alternate;
+  }
+
+  @keyframes gradient-animation{
+    0%{
+      background-position: left;
+    }
+    100%{
+      background-position: right;
+    }
+  }
+
+
   .name-container {
-    /* position: relative;
-    bottom: 2rem;
-    left: 2rem; */
-    /* max-height: 120px; */
     background-color: var(--bg-color);
-    /* max-width: 200px; */
     padding: 0.3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid var(--primary-color); */
   }
   .name-header {
     text-align: center;
@@ -180,28 +225,17 @@
       font-size: 3rem;
     }
   } */
-  .bottom-container{
+  .bottom-container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     border: 1px solid var(--primary-color);
     border-top: none;
   }
-  .presentation-items {
-    background-color: var(--bg-color);
-    border-right: 1px solid var(--primary-color);
-    padding: 0.6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+
+  @media(min-width: 768px){
+    .bottom-container {
+    grid-template-columns: 2fr 1fr;
   }
-  .presentation-text {
-    max-width: 500px;
-    line-height: 1rem;
-    font-family: 'Raleway', sans-serif;
-    margin: 0.3rem;
-    font-size: 0.9rem;
-    padding-bottom: 1rem;
   }
   .skills-container {
     background-color: var(--bg-color);

@@ -5,13 +5,13 @@
   --primary-bg: #F2EEEB;
 
   --secondary-color: #B7AEF1;
-  /* --secondary-color: #C0F205; */
   --border: 1px solid var(--primary-color);
 
   --third-bg: #2BDA99;
   --fourth-bg: #238C6E;
   --fifth-bg: #F3B3D6;
-  /* --third-bg: #F21A05; */
+
+  --gradient: linear-gradient(45deg,var(--fifth-bg),var(--secondary-color),var(--primary-bg),var(--primary-color));
 }
 
 body {
@@ -79,10 +79,16 @@ a{
 .intro-title {
   /* text-align: center; */
   font-family: 'Raleway', sans-serif;
-  font-size: 6rem;
+  font-size: 3rem;
   padding: 0;
-  padding: 3rem;
+  padding: 2.5rem;
   margin: 0;
+}
+
+@media (min-width: 522px) {
+  .intro-title{
+    font-size: 6rem;
+  }
 }
 
 .black-arrow{
