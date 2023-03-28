@@ -66,9 +66,17 @@ a{
   text-align: center;
   font-weight: 900;
   color: var(--primary-color);
-  border: 5px solid var(--secondary-color);
-  border-radius: 10px;
-  background-color: var(--secondary-color);
+  border-radius: 100px;
+  padding: .8rem;
+  background-color: var(--primary-bg);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-container{
+  gap: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .action-btn:hover{
