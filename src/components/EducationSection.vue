@@ -33,6 +33,8 @@
 </template>
 <style>
   .education-wrapper {
+    border-right: 1px solid var(--primary-color);
+    border-left: 1px solid var(--primary-color);
     /* padding: 5rem 0;
     background-color: var(--third-bg); */
   }
@@ -87,9 +89,12 @@
   }
 
   @media (min-width: 578px) {
+    .education-intro-section {
+      border-right: 1px solid var(--primary-color);
+    }
     .education-container{
       grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
     }
   }
 
