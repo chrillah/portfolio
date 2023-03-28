@@ -2,7 +2,7 @@
   <div class="education-wrapper">
     <div class="education-container">
       <div class="education-intro-section">
-        <h1 class="intro-title">Education</h1>
+        <h1 class="intro-title">Educations</h1>
         <!-- <div class="intro-presentation">
           <p>Frontend development</p>
           <p>UX</p>
