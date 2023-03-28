@@ -54,18 +54,40 @@
         </div>
       </div>
     </div>
-    <div class="detail-bottom-container">
-      <div v-for="project in detailProjects" :key="project.id" class="projects-item-container">
+
+    <div v-for="project in detailProjects" :key="project.id" class="projects-item-container">
         <div class="project-detail">
           <h1>{{ project.title }}</h1>
           <p>{{ project.description }}</p>
           <img class="symbol-img" src="/assets/img/portfolio_white-arrow.png" alt="A white vector arrow">
         </div>
-        <div class="project-img-container"><img class="project-img" :src="project.image" alt="Project image" />
-          <a target="_blank" :href="project.link" class="action-btn" >Link</a>
-        </div>
+        <div class="project-img" :style="{ backgroundImage: `url(${project.image})` }">
+            <a target="_blank" :href="project.link" class="action-btn btn-container">
+              <svg
+            class="black-arrow  other-side"
+            id="Layer_1"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 50 46"
+          >
+            <polyline
+              id="POINT"
+              class="black-arrow-detail"
+              points="23.82 .35 .71 23.46 23.82 46.57"
+            />
+            <line
+              id="LINE"
+              class="black-arrow-detail"
+              x1=".71"
+              y1="23.46"
+              x2="50.71"
+              y2="23.46"
+            />
+          </svg>
+          <p>Link to project</p>
+            </a>
+          </div>
       </div>
-    </div>
     <!-- <div class="education-button-container">
       <RouterLink to="#top" class="action-btn to-the-top">To the top</RouterLink>
     </div> -->
@@ -209,26 +231,10 @@
   font-size: .8rem;
 }
 
-.detail-bottom-container{
-  /* display: grid;
-  grid-template-rows: 1fr 1fr; */
-}
-
-/* @media (min-width:1024px){
-  .detail-bottom-container{
-  grid-template-rows:none;
-}
-} */
-
-/* @media (min-width:768px){
-  .detail-bottom-container{
-  grid-template-columns: 1fr 1fr;
-}
-} */
 
 .projects-item-container{
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1fr 1fr;
   background-color: var(--primary-color);
 }
 
@@ -277,13 +283,26 @@
 .project-detail h1{
   font-size: 1.5rem;
   margin: 0;
+  padding-bottom: 2rem;
 }
 
 .project-img{
-  margin: 0;
+    min-height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  /* margin: 0;
   padding: 0;
-  width: 100%;
+  width: 100%; */
 }
+
+.other-side {
+    rotate: 180deg;
+  }
 
 .education-button-container{
   padding: 5rem 0;
@@ -300,11 +319,6 @@
 </style>
 <script>
 export default{
-  methods:{
-    click(){
-      console.log("CLICK")
-    }
-  },
   data(){
     return{
       detailTitle : this.title,

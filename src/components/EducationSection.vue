@@ -13,9 +13,12 @@
         :to="education.view"
         v-for="education in listOfEducation"
         :key="education.id"
-        :style="{ backgroundImage: `url(${education.images[currentImage]})` }"
+        :style="{ backgroundImage: `url(${education.image})` }"
         class="education-item"
       >
+
+      <!--    TILLHÖR education :style="{ backgroundImage: `url(${education.images[currentImage]})` }" -->
+
         <div class="education-detail-container">
           <!-- <ul class="tools-container">
             <li class="tool-item" v-for="tool in education.tools" :key="tool.id">
@@ -195,11 +198,7 @@
               { id: 5, tool: 'Agile development' },
               { id: 6, tool: 'Full-stack development' }
             ],
-            images: [
-              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/frontend-34.png',
-              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/techware-pr2_vrshady_model_copy_6_kopia_2.png',
-              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/rickandmortyapi-25.png'
-            ]
+            image: 'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/copb/publication-web-resources/image/techware_model-38.png'
           },
           {
             id: 2,
@@ -213,11 +212,12 @@
               { id: 4, tool: 'User testing' },
               { id: 5, tool: 'Responsive design' }
             ],
-            images: [
-              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/ux_presentation-01.png',
-              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/spolierappen-01.png',
-              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/web-portfolio.png'
-            ]
+            image: 'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/ux_presentation-01.png'
+            // images: [
+            //   'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/ux_presentation-01.png',
+            //   'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/spolierappen-01.png',
+            //   'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/web-portfolio.png'
+            // ]
           },
           {
             id: 3,
@@ -230,11 +230,12 @@
               { id: 3, tool: 'CAD technique' },
               { id: 4, tool: 'Marketing & consumer behavior' }
             ],
-            images: [
-              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/graphic-presentation-01.png',
-              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/CDG_1.png',
-              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/OBOY_1.png'
-            ]
+            image:'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/graphic-presentation-01.png'
+            // images: [
+            //   'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/graphic-presentation-01.png',
+            //   'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/CDG_1.png',
+            //   'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/OBOY_1.png'
+            // ]
           }
         ]
       }

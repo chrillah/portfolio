@@ -44,7 +44,7 @@
             description:
               'Final project for HTML/CSS-course. My project is about a fictitious technology company that works with trends and fashion to spread propaganda. I have done everything myself, including visual brand identity, illustrations, and coding.',
             image:
-              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/nb1y/publication-web-resources/image/techware-pr2_vrshady_model_copy_6_kopia_2.png',
+              'https://indd.adobe.com/view/publication/555f1a62-aeaf-42fc-996e-c5540fd9d7c9/copb/publication-web-resources/image/techware_model-38.png',
             link: 'http://studentiths.se/JSUFEU-STHLM/ChristopherR/'
           },
           {
