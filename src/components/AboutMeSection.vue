@@ -53,6 +53,7 @@
 </template>
 <style>
   .about-wrapper {
+    font-family: 'Raleway', sans-serif;
     --bg-color: var(--primary-bg);
   }
   .about-container {
@@ -122,7 +123,6 @@
   .presentation-text {
     max-width: 500px;
     line-height: 1rem;
-    font-family: 'Raleway', sans-serif;
     margin: 0.3rem;
     font-size: 0.9rem;
     padding-bottom: 1rem;
@@ -178,34 +178,7 @@
     width: 100px;
     height: 100px;
   }
-  .name-container {
-    background-color: var(--bg-color);
-    padding: 0.3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .name-header {
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    font-size: 1.8rem;
-    font-family: 'Raleway', sans-serif;
-  }
-  .name-header span {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-  }
 
-  /* @media (min-width: 600px) {
-    .name-container{
-      left: 8rem;
-      max-width: 300px;
-    }
-    .name-header {
-      font-size: 3rem;
-    }
-  } */
   .bottom-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -220,7 +193,6 @@
     align-items: center;
     flex-direction: column;
     padding: 0.3rem;
-    font-family: 'Raleway', sans-serif;
     border-right: 1px solid var(--primary-color);
     /* border: 1px solid var(--primary-color); */
   }

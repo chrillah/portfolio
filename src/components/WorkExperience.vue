@@ -1,7 +1,7 @@
 <template>
   <div class="work-wrapper">
     <div class="work-container">
-      <h1 class="work-header">Work Experience</h1>
+      <h1 class="work-header intro-title">Work Experience</h1>
       <div class="experience-container">
         <div v-for="work in list" :key="work.id" class="experience-item">
           <h1 class="year-header">{{ work.year }}</h1>
@@ -24,7 +24,7 @@
   }
 
   .work-wrapper {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Raleway', sans-serif;
     color: var(--primary-bg);
     background-color: var(--primary-color);
     padding-bottom: 5rem;
@@ -34,12 +34,12 @@
     padding: 5rem 0;
   }
   .work-header {
-    font-style: italic;
-    font-size: 3.5rem;
-    line-height: 4rem;
+    /* font-style: italic; */
+    /* font-size: 3.5rem;
+    line-height: 4rem; */
     padding: 0 0.3rem 5rem 0.3rem;
     margin: 0 0.6rem;
-    word-break: break-all;
+    /* word-break: break-all; */
   }
 
   @media (min-width: 375px) {
