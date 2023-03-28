@@ -47,12 +47,8 @@
 <template>
   <div class="hero-wrapper">
     <div class="hero-presentation-container">
-      <!-- <ul class="attributes-container">
-        <li class="attribute-item" v-for="attribute in attributes" :key="attribute.id">{{ attribute.title }}</li>
-      </ul> -->
       <h class="hero-title">Christopher Rönnberg</h>
     </div>
-    <!-- <h1 class="hero-header">web</h1> -->
     <div class="hero-grid-container">
       <div class="grid-letter">
         <div class="p-box-1" />
@@ -88,7 +84,6 @@
         <div class="o-box" />
       </div>
     </div>
-    <!-- <h1 class="intro-header">portfolio</h1> -->
   </div>
 </template>
 
@@ -99,13 +94,6 @@
     display: grid;
     grid-template-columns: 1fr;
       grid-template-rows: auto 1fr;
-    /* position: relative; */
-    /* background-color: var(--primary-color); */
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
-    /* margin-top: 1rem; */
   }
 
   @media (min-width: 768px) {
@@ -129,34 +117,12 @@
       border-bottom: none;
     }
   }
-  .attributes-container{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border-right: 1px solid var(--primary-color);
-    border-bottom: none;
-  }
 
-  @media (min-width: 768px) {
-    .attributes-container{
-      width: 100%;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: row;
-      border-right: none;
-      border-bottom: 1px solid var(--primary-color);
-    }
-  }
-
-  .attribute-item{
-    padding: 1rem;
-  }
   .hero-title{
     padding: 3rem;
     font-family: 'Raleway', sans-serif;
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 4rem;
     word-break: break-all;
   }
 
@@ -166,15 +132,6 @@
     }
   }
 
-  .hero-header {
-    padding: 0;
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 900;
-    font-size: 40vw;
-    text-align: center;
-    color: var(--primary-bg);
-  }
   .hero-grid-container {
     /* background-image: var(--gradient); */
     /* margin: 0 auto; */
@@ -193,29 +150,6 @@
     }
   }
 
-  .intro-header {
-    display: none;
-    font-size: 4rem;
-    position: absolute;
-    top: 10rem;
-    left: 3rem;
-    color: var(--secondary-color);
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-  }
-
-  @media (min-width: 375px) {
-    .intro-header {
-      font-size: 5rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .intro-header {
-      top: 20rem;
-      left: 10rem;
-    }
-  }
 
   .grid-letter {
     background-color: var(--primary-bg);
