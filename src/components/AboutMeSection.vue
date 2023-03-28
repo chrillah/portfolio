@@ -213,11 +213,6 @@
     border-top: none;
   }
 
-  @media(min-width: 768px){
-    .bottom-container {
-    grid-template-columns: 1fr 1fr;
-  }
-  }
   .skills-container {
     background-color: var(--bg-color);
     display: flex;
@@ -226,8 +221,16 @@
     flex-direction: column;
     padding: 0.3rem;
     font-family: 'Raleway', sans-serif;
+    border-right: 1px solid var(--primary-color);
     /* border: 1px solid var(--primary-color); */
   }
+
+  @media(min-width: 768px){
+    .bottom-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  }
+
   .skills-header {
     margin: 0.3rem;
     font-weight: 900;
