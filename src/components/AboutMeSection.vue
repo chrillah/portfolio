@@ -31,9 +31,6 @@
         </div>
       </div>
       <div class="bottom-container">
-        <div class="symbols-container">
-          <div class="gradient-container"></div>
-        </div>
         <div class="skills-container">
           <div class="skills-items">
             <p class="skills-header">Some of my skills</p>
@@ -46,6 +43,9 @@
               <li>UX</li>
             </ul>
           </div>
+        </div>
+        <div class="symbols-container">
+          <div class="gradient-container"></div>
         </div>
       </div>
     </div>
@@ -215,7 +215,7 @@
 
   @media(min-width: 768px){
     .bottom-container {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   }
   .skills-container {
@@ -231,13 +231,14 @@
   .skills-header {
     margin: 0.3rem;
     font-weight: 900;
+    font-size: 1.5rem;
   }
 
   .skills {
     padding: 0.3rem 0;
   }
   .skills li {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin: 0.3rem;
     padding: 0.3rem 0;
