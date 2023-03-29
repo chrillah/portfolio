@@ -185,7 +185,7 @@
   }
 
   .nav-button[aria-expanded='true'] .top {
-    rotate: 45deg;
+    rotate: 225deg;
   }
 
   .nav-button[aria-expanded='true'] .middle {
@@ -193,7 +193,7 @@
   }
 
   .nav-button[aria-expanded='true'] .bottom {
-    rotate: -45deg;
+    rotate: -225deg;
   }
 
   .invert-color {

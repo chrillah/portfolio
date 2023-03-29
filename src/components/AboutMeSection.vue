@@ -152,22 +152,22 @@
     0% {
       height: 110px;
     }
-    5% {
+    1% {
       height: 0px;
+    }
+    2% {
+      height: 90px;
+    }
+    4% {
+      height: 0px;
+    }
+    6% {
+      height: 90px;
     }
     15% {
-      height: 110px;
+      height: 140px;
     }
-    20% {
-      height: 0px;
-    }
-    25% {
-      height: 130px;
-    }
-    50% {
-      height: 0px;
-    }
-    100% {
+    100%{
       height: 110px;
     }
   }
